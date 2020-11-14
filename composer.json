@@ -1,0 +1,42 @@
+{
+    "name": "arueckauer/laminas-diagnostics-factories",
+    "type": "library",
+    "description": "Configuration-based PSR-11 factories for laminas-diagnostics",
+    "keywords": [
+        "arueckauer",
+        "laminas-diagnostics",
+        "factory",
+        "health-check",
+        "psr11"
+    ],
+    "homepage": "https://github.com/arueckauer/laminas-diagnostics-factories",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Andi Rückauer",
+            "email": "arueckauer@gmail.com",
+            "homepage": "https://arueckauer.github.io/",
+            "role": "Project Lead"
+        }
+    ],
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "arueckauer\\LaminasDiagnosticsFactories\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "arueckauerTest\\LaminasDiagnosticsFactories\\": "test/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
