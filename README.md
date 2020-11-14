@@ -7,7 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Configuration-based PSR-11 factories for laminas-diagnostics
+Configuration-based PSR-11 factories for [laminas-diagnostics](https://docs.laminas.dev/laminas-diagnostics/)
 
 ## Install
 
