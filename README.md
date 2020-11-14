@@ -38,18 +38,10 @@ $ composer test
 
 Please see [CONTRIBUTING](doc/CONTRIBUTING.md) and [CODE_OF_CONDUCT](doc/CODE_OF_CONDUCT.md) for details.
 
-## Security
-
-If you discover any security related issues, please email arueckauer@gmail.com instead of using the issue tracker.
-
 ## Credits
 
 -   [Andi Rückauer][link-author]
 -   [All Contributors][link-contributors]
-
-## Copyright
-
-Andi Rückauer
 
 [ico-version]: https://img.shields.io/packagist/v/arueckauer/laminas-diagnostics-factories.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-BSD3-brightgreen.svg?style=flat-square
