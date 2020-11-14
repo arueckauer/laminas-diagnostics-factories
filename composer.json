@@ -20,9 +20,14 @@
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^7.4",
+        "laminas/laminas-diagnostics": "^1.6",
+        "psr/container": "^1.0"
     },
     "require-dev": {
+        "laminas/laminas-coding-standard": "^2.1",
+        "phpunit/phpunit": "^9.4",
+        "roave/security-advisories": "dev-latest"
     },
     "config": {
         "sort-packages": true
