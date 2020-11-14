@@ -2,10 +2,15 @@
 
 All notable changes to this publication will be documented in this file.
 
-## ?.?.? (????-??-??)
+## 1.0.0 (2020-11-14)
 
-First stable release.
+First stable release. Provides factories for
 
-* Change: #2 Issue Name 2
-* Bug: #1 Issue Name 1
-* Feature: #0 Issue Name 0
+-   CpuPerformance
+-   DiskFree
+-   DirWritable
+-   ExtensionLoaded
+-   GuzzleHttpService
+-   PDOCheck
+-   PhpVersion
+-   SecurityAdvisory
