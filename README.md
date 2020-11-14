@@ -13,13 +13,13 @@ Configuration-based PSR-11 factories for [laminas-diagnostics](https://docs.lami
 
 Via Composer
 
-``` bash
+```bash
 $ composer require arueckauer/laminas-diagnostics-factories
 ```
 
 ## Usage
 
-``` php
+```php
 $skeleton = new Package\Skeleton();
 echo $skeleton->echoPhrase('Hello World!');
 ```
@@ -30,7 +30,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Testing
 
-``` bash
+```bash
 $ composer test
 ```
 
@@ -44,8 +44,8 @@ If you discover any security related issues, please email arueckauer@gmail.com i
 
 ## Credits
 
-- [Andi Rückauer][link-author]
-- [All Contributors][link-contributors]
+-   [Andi Rückauer][link-author]
+-   [All Contributors][link-contributors]
 
 ## Copyright
 
@@ -57,7 +57,6 @@ Andi Rückauer
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/arueckauer/laminas-diagnostics-factories.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/arueckauer/laminas-diagnostics-factories.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/arueckauer/laminas-diagnostics-factories.svg?style=flat-square
-
 [link-packagist]: https://packagist.org/packages/arueckauer/laminas-diagnostics-factories
 [link-travis]: https://travis-ci.org/arueckauer/laminas-diagnostics-factories
 [link-scrutinizer]: https://scrutinizer-ci.com/g/arueckauer/laminas-diagnostics-factories/code-structure
