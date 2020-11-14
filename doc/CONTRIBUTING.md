@@ -6,7 +6,7 @@ We accept contributions via Pull Requests on [Github](https://github.com/aruecka
 
 ## Pull Requests
 
--   **[Laminas Coding Standard](https://github.com/laminas/laminas-coding-standard/)** - Check the code style with `$ composer cs-check`.
+-   **[Laminas Coding Standard](https://github.com/laminas/laminas-coding-standard/)** - Check the code style with `$ ./vendor/bin/phpcs`.
 
 -   **Add tests!** - Patches without tests will not be accepted.
 
@@ -21,7 +21,7 @@ We accept contributions via Pull Requests on [Github](https://github.com/aruecka
 ## Running Tests
 
 ```bash
-$ composer test
+$ ./vendor/bin/phpunit
 ```
 
 **Happy coding**!
