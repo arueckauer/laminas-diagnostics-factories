@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace arueckauer\LaminasDiagnosticsFactories\Exception;
+namespace LaminasDiagnosticsFactories\Exception;
 
 use Psr\Container\ContainerInterface;
 use RuntimeException;

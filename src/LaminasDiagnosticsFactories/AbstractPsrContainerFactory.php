@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace arueckauer\LaminasDiagnosticsFactories\Service;
+namespace LaminasDiagnosticsFactories;
 
-use arueckauer\LaminasDiagnosticsFactories\Exception\BadStaticPsrContainerFactoryUsageException;
+use LaminasDiagnosticsFactories\Exception\BadStaticPsrContainerFactoryUsageException;
 use Laminas\Diagnostics\Check\CheckInterface;
 use Psr\Container\ContainerInterface;
 

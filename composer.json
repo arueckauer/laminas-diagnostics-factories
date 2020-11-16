@@ -34,12 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "arueckauer\\LaminasDiagnosticsFactories\\": "src/"
+            "LaminasDiagnosticsFactories\\": "src/LaminasDiagnosticsFactories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "arueckauerTest\\LaminasDiagnosticsFactories\\": "test/"
+            "LaminasDiagnosticsFactoriesTest\\": "test/LaminasDiagnosticsFactories"
         }
     },
     "minimum-stability": "stable",

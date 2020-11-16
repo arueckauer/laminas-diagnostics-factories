@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace arueckauer\LaminasDiagnosticsFactories\Service;
+namespace LaminasDiagnosticsFactories;
 
 use Laminas\Diagnostics\Check\DiskFree;
 use Psr\Container\ContainerInterface;

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-use arueckauer\LaminasDiagnosticsFactories\Service\CpuPerformancePsrContainerFactory;
-use arueckauer\LaminasDiagnosticsFactories\Service\DirWritablePsrContainerFactory;
-use arueckauer\LaminasDiagnosticsFactories\Service\DiskFreePsrContainerFactory;
-use arueckauer\LaminasDiagnosticsFactories\Service\ExtensionLoadedPsrContainerFactory;
-use arueckauer\LaminasDiagnosticsFactories\Service\GuzzleHttpServicePsrContainerFactory;
-use arueckauer\LaminasDiagnosticsFactories\Service\PDOCheckPsrContainerFactory;
-use arueckauer\LaminasDiagnosticsFactories\Service\PhpVersionPsrContainerFactory;
-use arueckauer\LaminasDiagnosticsFactories\Service\SecurityAdvisoryPsrContainerFactory;
+use LaminasDiagnosticsFactories\CpuPerformancePsrContainerFactory;
+use LaminasDiagnosticsFactories\DirWritablePsrContainerFactory;
+use LaminasDiagnosticsFactories\DiskFreePsrContainerFactory;
+use LaminasDiagnosticsFactories\ExtensionLoadedPsrContainerFactory;
+use LaminasDiagnosticsFactories\GuzzleHttpServicePsrContainerFactory;
+use LaminasDiagnosticsFactories\PDOCheckPsrContainerFactory;
+use LaminasDiagnosticsFactories\PhpVersionPsrContainerFactory;
+use LaminasDiagnosticsFactories\SecurityAdvisoryPsrContainerFactory;
 
 return [
     'diagnostics' => [
