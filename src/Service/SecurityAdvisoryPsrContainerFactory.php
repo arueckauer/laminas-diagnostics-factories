@@ -7,11 +7,13 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\SecurityAdvisory;
 use Psr\Container\ContainerInterface;
 
-final class SecurityAdvisoryFactory
+final class SecurityAdvisoryPsrContainerFactory extends AbstractPsrContainerFactory
 {
     public function __invoke(ContainerInterface $container): SecurityAdvisory
     {
-        $params = $container->get('config')['system']['health-check']['params'][SecurityAdvisory::class] ?? [];
+        $this->container = $container;
+        $params          = $this->getParams();
+
         return new SecurityAdvisory(
             $this->getLockFilePath($params)
         );

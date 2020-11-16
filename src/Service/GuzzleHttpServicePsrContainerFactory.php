@@ -8,11 +8,13 @@ use GuzzleHttp\ClientInterface as GuzzleClientInterface;
 use Laminas\Diagnostics\Check\GuzzleHttpService;
 use Psr\Container\ContainerInterface;
 
-final class GuzzleHttpServiceFactory
+final class GuzzleHttpServicePsrContainerFactory extends AbstractPsrContainerFactory
 {
     public function __invoke(ContainerInterface $container): GuzzleHttpService
     {
-        $params = $container->get('config')['system']['health-check']['params'][GuzzleHttpService::class] ?? [];
+        $this->container = $container;
+        $params          = $this->getParams();
+
         return new GuzzleHttpService(
             $this->getRequestOrUrl($params),
             $this->getHeaders($params),

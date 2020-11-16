@@ -7,11 +7,13 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\PDOCheck;
 use Psr\Container\ContainerInterface;
 
-final class PDOCheckFactory
+final class PDOCheckPsrContainerFactory extends AbstractPsrContainerFactory
 {
     public function __invoke(ContainerInterface $container): PDOCheck
     {
-        $params = $container->get('config')['system']['health-check']['params'][PDOCheck::class] ?? [];
+        $this->container = $container;
+        $params          = $this->getParams();
+
         return new PDOCheck(
             $this->getDsn($params),
             $this->getUsername($params),

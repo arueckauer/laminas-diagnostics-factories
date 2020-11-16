@@ -7,11 +7,13 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\CpuPerformance;
 use Psr\Container\ContainerInterface;
 
-final class CpuPerformanceFactory
+final class CpuPerformancePsrContainerFactory extends AbstractPsrContainerFactory
 {
     public function __invoke(ContainerInterface $container): CpuPerformance
     {
-        $params = $container->get('config')['system']['health-check']['params'][CpuPerformance::class] ?? [];
+        $this->container = $container;
+        $params          = $this->getParams();
+
         return new CpuPerformance(
             $this->getMinPerformance($params),
         );

@@ -7,11 +7,13 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\DiskFree;
 use Psr\Container\ContainerInterface;
 
-final class DiskFreeFactory
+final class DiskFreePsrContainerFactory extends AbstractPsrContainerFactory
 {
     public function __invoke(ContainerInterface $container): DiskFree
     {
-        $params = $container->get('config')['system']['health-check']['params'][DiskFree::class] ?? [];
+        $this->container = $container;
+        $params          = $this->getParams();
+
         return new DiskFree(
             $this->getSize($params),
             $this->getPath($params)

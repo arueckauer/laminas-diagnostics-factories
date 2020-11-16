@@ -8,11 +8,13 @@ use Laminas\Diagnostics\Check\ExtensionLoaded;
 use Psr\Container\ContainerInterface;
 use Traversable;
 
-final class ExtensionLoadedFactory
+final class ExtensionLoadedPsrContainerFactory extends AbstractPsrContainerFactory
 {
     public function __invoke(ContainerInterface $container): ExtensionLoaded
     {
-        $params = $container->get('config')['system']['health-check']['params'][ExtensionLoaded::class] ?? [];
+        $this->container = $container;
+        $params          = $this->getParams();
+
         return new ExtensionLoaded(
             $this->getExtensionName($params),
         );

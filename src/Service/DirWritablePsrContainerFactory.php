@@ -7,11 +7,13 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\DirWritable;
 use Psr\Container\ContainerInterface;
 
-final class DirWritableFactory
+final class DirWritablePsrContainerFactory extends AbstractPsrContainerFactory
 {
     public function __invoke(ContainerInterface $container): DirWritable
     {
-        $params = $container->get('config')['system']['health-check']['params'][DirWritable::class] ?? [];
+        $this->container = $container;
+        $params          = $this->getParams();
+
         return new DirWritable(
             $this->getPath($params),
         );

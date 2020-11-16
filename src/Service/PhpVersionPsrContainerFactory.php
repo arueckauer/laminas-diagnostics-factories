@@ -7,11 +7,13 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\PhpVersion;
 use Psr\Container\ContainerInterface;
 
-final class PhpVersionFactory
+final class PhpVersionPsrContainerFactory extends AbstractPsrContainerFactory
 {
     public function __invoke(ContainerInterface $container): PhpVersion
     {
-        $params = $container->get('config')['system']['health-check']['params'][PhpVersion::class] ?? [];
+        $this->container = $container;
+        $params          = $this->getParams();
+
         return new PhpVersion(
             $this->getExpectedVersion($params),
             $this->getOperator($params)
