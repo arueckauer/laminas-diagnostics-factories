@@ -19,10 +19,7 @@ $ composer require arueckauer/laminas-diagnostics-factories
 
 ## Usage
 
-```php
-$skeleton = new Package\Skeleton();
-echo $skeleton->echoPhrase('Hello World!');
-```
+See [example/config.php](example/config.php) for configuration details.
 
 ## Change log
 
