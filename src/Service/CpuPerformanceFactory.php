@@ -7,7 +7,7 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\CpuPerformance;
 use Psr\Container\ContainerInterface;
 
-class CpuPerformanceFactory
+final class CpuPerformanceFactory
 {
     public function __invoke(ContainerInterface $container): CpuPerformance
     {

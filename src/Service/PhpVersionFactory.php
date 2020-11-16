@@ -7,7 +7,7 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\PhpVersion;
 use Psr\Container\ContainerInterface;
 
-class PhpVersionFactory
+final class PhpVersionFactory
 {
     public function __invoke(ContainerInterface $container): PhpVersion
     {

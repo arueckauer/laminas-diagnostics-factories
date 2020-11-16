@@ -7,7 +7,7 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\PDOCheck;
 use Psr\Container\ContainerInterface;
 
-class PDOCheckFactory
+final class PDOCheckFactory
 {
     public function __invoke(ContainerInterface $container): PDOCheck
     {

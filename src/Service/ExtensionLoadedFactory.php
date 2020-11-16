@@ -8,7 +8,7 @@ use Laminas\Diagnostics\Check\ExtensionLoaded;
 use Psr\Container\ContainerInterface;
 use Traversable;
 
-class ExtensionLoadedFactory
+final class ExtensionLoadedFactory
 {
     public function __invoke(ContainerInterface $container): ExtensionLoaded
     {

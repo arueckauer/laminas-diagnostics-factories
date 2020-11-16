@@ -7,7 +7,7 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\DirWritable;
 use Psr\Container\ContainerInterface;
 
-class DirWritableFactory
+final class DirWritableFactory
 {
     public function __invoke(ContainerInterface $container): DirWritable
     {

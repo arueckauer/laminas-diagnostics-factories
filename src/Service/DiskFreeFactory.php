@@ -7,7 +7,7 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\DiskFree;
 use Psr\Container\ContainerInterface;
 
-class DiskFreeFactory
+final class DiskFreeFactory
 {
     public function __invoke(ContainerInterface $container): DiskFree
     {

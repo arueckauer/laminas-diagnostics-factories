@@ -8,7 +8,7 @@ use GuzzleHttp\ClientInterface as GuzzleClientInterface;
 use Laminas\Diagnostics\Check\GuzzleHttpService;
 use Psr\Container\ContainerInterface;
 
-class GuzzleHttpServiceFactory
+final class GuzzleHttpServiceFactory
 {
     public function __invoke(ContainerInterface $container): GuzzleHttpService
     {

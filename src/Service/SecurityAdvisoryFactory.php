@@ -7,7 +7,7 @@ namespace arueckauer\LaminasDiagnosticsFactories\Service;
 use Laminas\Diagnostics\Check\SecurityAdvisory;
 use Psr\Container\ContainerInterface;
 
-class SecurityAdvisoryFactory
+final class SecurityAdvisoryFactory
 {
     public function __invoke(ContainerInterface $container): SecurityAdvisory
     {
