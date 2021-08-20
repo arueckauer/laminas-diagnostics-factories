@@ -21,6 +21,12 @@ matrix:
         - COMPOSER_FLAGS="--prefer-stable --prefer-lowest"
         - CS_CHECK=true
         - TEST_COVERAGE=true
+    - php: 8.0
+      env:
+        - DEPS=latest
+        - COMPOSER_FLAGS="--prefer-stable --prefer-lowest"
+        - CS_CHECK=true
+        - TEST_COVERAGE=true
 
 before_script:
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
