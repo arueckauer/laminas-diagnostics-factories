@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace LaminasDiagnosticsFactories;
 
-use LaminasDiagnosticsFactories\Exception\BadStaticPsrContainerFactoryUsageException;
 use Laminas\Diagnostics\Check\CheckInterface;
+use LaminasDiagnosticsFactories\Exception\BadStaticPsrContainerFactoryUsageException;
 use Psr\Container\ContainerInterface;
 
 use function count;
