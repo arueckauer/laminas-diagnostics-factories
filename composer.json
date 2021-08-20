@@ -21,7 +21,7 @@
     ],
     "require": {
         "php": "^7.4",
-        "laminas/laminas-diagnostics": "^1.6",
+        "laminas/laminas-diagnostics": "^1.7",
         "psr/container": "^1.0"
     },
     "require-dev": {
