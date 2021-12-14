@@ -20,13 +20,13 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ~8.0.0",
-        "laminas/laminas-diagnostics": "^1.7",
-        "psr/container": "^1.0"
+        "php": "^7.4 || ~8.0.0 || ~8.1.0",
+        "laminas/laminas-diagnostics": "^1.12.0",
+        "psr/container": "^1.1"
     },
     "require-dev": {
-        "laminas/laminas-coding-standard": "^2.1",
-        "phpunit/phpunit": "^9.4",
+        "laminas/laminas-coding-standard": "^2.3",
+        "phpunit/phpunit": "^9.5",
         "roave/security-advisories": "dev-latest"
     },
     "config": {
