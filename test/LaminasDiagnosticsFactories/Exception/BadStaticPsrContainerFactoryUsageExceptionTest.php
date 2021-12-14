@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Exception;
+namespace LaminasDiagnosticsFactories\Exception;
 
-use LaminasDiagnosticsFactories\Exception\BadStaticPsrContainerFactoryUsageException;
 use PHPUnit\Framework\TestCase;
 
 class BadStaticPsrContainerFactoryUsageExceptionTest extends TestCase
