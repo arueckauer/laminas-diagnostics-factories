@@ -25,13 +25,15 @@
         "psr/container": "^2.0.2"
     },
     "require-dev": {
+        "ergebnis/composer-normalize": "^2.39",
         "laminas/laminas-coding-standard": "^2.5",
         "phpunit/phpunit": "^9.6.13",
         "roave/security-advisories": "dev-latest"
     },
     "config": {
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true
         },
         "sort-packages": true
     },
