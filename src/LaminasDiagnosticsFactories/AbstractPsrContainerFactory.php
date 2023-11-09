@@ -15,13 +15,11 @@ abstract class AbstractPsrContainerFactory
 {
     public const CONFIG_KEY = 'diagnostics';
 
-    private string $checkName;
-
     protected ContainerInterface $container;
 
-    public function __construct(string $checkName)
-    {
-        $this->checkName = $checkName;
+    public function __construct(
+        private string $checkName,
+    ) {
     }
 
     public static function __callStatic(string $name, array $arguments): CheckInterface
