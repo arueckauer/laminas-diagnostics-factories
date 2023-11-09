@@ -37,8 +37,8 @@ Please see [CONTRIBUTING](doc/CONTRIBUTING.md) and [CODE_OF_CONDUCT](doc/CODE_OF
 
 ## Credits
 
--   [Andi Rückauer][link-author]
--   [All Contributors][link-contributors]
+- [Andi Rückauer][link-author]
+- [All Contributors][link-contributors]
 
 [ico-version]: https://img.shields.io/packagist/v/arueckauer/laminas-diagnostics-factories.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-BSD3-brightgreen.svg?style=flat-square
