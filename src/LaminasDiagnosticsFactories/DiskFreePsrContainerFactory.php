@@ -14,10 +14,13 @@ final class DiskFreePsrContainerFactory extends AbstractPsrContainerFactory
         $this->container = $container;
         $params          = $this->getParams();
 
-        return new DiskFree(
+        $check = new DiskFree(
             $this->getSize($params),
             $this->getPath($params)
         );
+        $check->setLabel($this->getLabel($params));
+
+        return $check;
     }
 
     private function getSize(array $params): ?string

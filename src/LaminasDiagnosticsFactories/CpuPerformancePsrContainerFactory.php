@@ -14,9 +14,12 @@ final class CpuPerformancePsrContainerFactory extends AbstractPsrContainerFactor
         $this->container = $container;
         $params          = $this->getParams();
 
-        return new CpuPerformance(
+        $check = new CpuPerformance(
             $this->getMinPerformance($params),
         );
+        $check->setLabel($this->getLabel($params));
+
+        return $check;
     }
 
     private function getMinPerformance(array $params): ?float

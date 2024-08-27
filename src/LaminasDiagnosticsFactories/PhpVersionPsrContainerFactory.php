@@ -14,10 +14,13 @@ final class PhpVersionPsrContainerFactory extends AbstractPsrContainerFactory
         $this->container = $container;
         $params          = $this->getParams();
 
-        return new PhpVersion(
+        $check = new PhpVersion(
             $this->getExpectedVersion($params),
             $this->getOperator($params)
         );
+        $check->setLabel($this->getLabel($params));
+
+        return $check;
     }
 
     private function getExpectedVersion(array $params): string

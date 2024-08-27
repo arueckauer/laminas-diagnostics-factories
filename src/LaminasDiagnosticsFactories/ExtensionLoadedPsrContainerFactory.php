@@ -15,9 +15,12 @@ final class ExtensionLoadedPsrContainerFactory extends AbstractPsrContainerFacto
         $this->container = $container;
         $params          = $this->getParams();
 
-        return new ExtensionLoaded(
+        $check = new ExtensionLoaded(
             $this->getExtensionName($params),
         );
+        $check->setLabel($this->getLabel($params));
+
+        return $check;
     }
 
     /**

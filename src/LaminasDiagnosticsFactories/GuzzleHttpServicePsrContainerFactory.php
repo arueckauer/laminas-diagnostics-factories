@@ -15,7 +15,7 @@ final class GuzzleHttpServicePsrContainerFactory extends AbstractPsrContainerFac
         $this->container = $container;
         $params          = $this->getParams();
 
-        return new GuzzleHttpService(
+        $check = new GuzzleHttpService(
             $this->getRequestOrUrl($params),
             $this->getHeaders($params),
             $this->getOptions($params),
@@ -25,6 +25,9 @@ final class GuzzleHttpServicePsrContainerFactory extends AbstractPsrContainerFac
             $this->getMethod($params),
             $this->getBody($params)
         );
+        $check->setLabel($this->getLabel($params));
+
+        return $check;
     }
 
     private function getRequestOrUrl(array $params): string

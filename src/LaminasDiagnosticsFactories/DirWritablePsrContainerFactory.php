@@ -14,9 +14,12 @@ final class DirWritablePsrContainerFactory extends AbstractPsrContainerFactory
         $this->container = $container;
         $params          = $this->getParams();
 
-        return new DirWritable(
+        $check = new DirWritable(
             $this->getPath($params),
         );
+        $check->setLabel($this->getLabel($params));
+
+        return $check;
     }
 
     private function getPath(array $params): ?string

@@ -14,9 +14,12 @@ final class SecurityAdvisoryPsrContainerFactory extends AbstractPsrContainerFact
         $this->container = $container;
         $params          = $this->getParams();
 
-        return new SecurityAdvisory(
+        $check = new SecurityAdvisory(
             $this->getLockFilePath($params)
         );
+        $check->setLabel($this->getLabel($params));
+
+        return $check;
     }
 
     private function getLockFilePath(array $params): ?string

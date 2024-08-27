@@ -14,16 +14,20 @@ use LaminasDiagnosticsFactories\SecurityAdvisoryPsrContainerFactory;
 return [
     'diagnostics' => [
         'cpu_performance'        => [
+            'label'          => 'CPU Performance',
             'minPerformance' => 0.5,
         ],
         'free_tmp_disk'          => [
-            'size' => '100MB',
-            'path' => '/tmp',
+            'label' => 'Free Disk Space',
+            'size'  => '100MB',
+            'path'  => '/tmp',
         ],
         'writable_tmp_directory' => [
-            'path' => '/tmp',
+            'label' => 'Writable temp directory',
+            'path'  => '/tmp',
         ],
         'php_extensions'         => [
+            'label'         => 'PHP extensions',
             'extensionName' => [
                 'gd',
                 'pdo',
@@ -31,6 +35,7 @@ return [
             ],
         ],
         'laminas_ping'           => [
+            'label'        => 'Laminas Project',
             'requestOrUrl' => 'https://getlaminas.org/',
             'headers'      => [],
             'options'      => [],
@@ -41,6 +46,7 @@ return [
             'body'         => null,
         ],
         'mezzio_ping'            => [
+            'label'        => 'Mezzio Project',
             'requestOrUrl' => 'https://docs.mezzio.dev/',
             'headers'      => [],
             'options'      => [],
@@ -51,16 +57,19 @@ return [
             'body'         => null,
         ],
         'mysql_connection'       => [
+            'label'    => 'MySQL Connection',
             'dsn'      => 'mysql://localhost/my_database',
             'username' => 'my_username',
             'password' => 'oFPZc!W&zV>,YCrz',
             'timeout'  => 1,
         ],
         'php_version'            => [
+            'label'           => 'PHP version',
             'expectedVersion' => '7.4',
             'operator'        => '>=',
         ],
         'security_advisory'      => [
+            'label'        => 'Security Advisory',
             'lockFilePath' => __DIR__ . '/../composer.lock',
         ],
     ],
