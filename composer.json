@@ -25,10 +25,10 @@
         "psr/container": "^1.1.2 | ^2.0.2"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.42",
-        "laminas/laminas-coding-standard": "^2.5",
-        "phpunit/phpunit": "^10.5",
-        "rector/rector": "^1.0",
+        "ergebnis/composer-normalize": "~2.44.0",
+        "laminas/laminas-coding-standard": "~3.0.0",
+        "phpunit/phpunit": "~10.5.36",
+        "rector/rector": "~1.2.7",
         "roave/security-advisories": "dev-latest"
     },
     "minimum-stability": "stable",
