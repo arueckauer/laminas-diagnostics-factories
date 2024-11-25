@@ -18,14 +18,16 @@ abstract class AbstractPsrContainerFactory
     protected ContainerInterface $container;
 
     public function __construct(
-        private string $checkName,
+        private readonly string $checkName,
     ) {
     }
+
+    abstract public function __invoke(ContainerInterface $container): CheckInterface;
 
     public static function __callStatic(string $name, array $arguments): CheckInterface
     {
         if (
-            0 === count($arguments)
+            count($arguments) === 0
             || ! ($container = current($arguments)) instanceof ContainerInterface
         ) {
             throw BadStaticPsrContainerFactoryUsageException::missingContainerArgument($name);
@@ -41,6 +43,7 @@ abstract class AbstractPsrContainerFactory
         if ($this->container->has('config')) {
             $config = $this->container->get('config');
         }
+
         return $config[self::CONFIG_KEY][$this->checkName] ?? [];
     }
 
