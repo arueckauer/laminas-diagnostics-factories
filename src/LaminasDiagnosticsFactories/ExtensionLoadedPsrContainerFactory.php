@@ -6,7 +6,6 @@ namespace LaminasDiagnosticsFactories;
 
 use Laminas\Diagnostics\Check\ExtensionLoaded;
 use Psr\Container\ContainerInterface;
-use Traversable;
 
 final class ExtensionLoadedPsrContainerFactory extends AbstractPsrContainerFactory
 {
@@ -23,10 +22,7 @@ final class ExtensionLoadedPsrContainerFactory extends AbstractPsrContainerFacto
         return $check;
     }
 
-    /**
-     * @return string|array|Traversable
-     */
-    private function getExtensionName(array $params)
+    private function getExtensionName(array $params): string|iterable
     {
         return $params['extensionName'];
     }
