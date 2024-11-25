@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace LaminasDiagnosticsFactories;
 
 use Laminas\Diagnostics\Check\DirWritable;
+use LaminasDiagnosticsFactories\Exception\InvalidConfiguration;
 use Psr\Container\ContainerInterface;
+
+use function sprintf;
 
 final class DirWritablePsrContainerFactory extends AbstractPsrContainerFactory
 {
@@ -22,8 +25,16 @@ final class DirWritablePsrContainerFactory extends AbstractPsrContainerFactory
         return $check;
     }
 
-    private function getPath(array $params): ?string
+    private function getPath(array $params): string|iterable
     {
-        return $params['path'] ?? null;
+        if (! isset($params['path'])) {
+            throw new InvalidConfiguration(sprintf(
+                'Missing "path" key in diagnostics config for %s (%s).',
+                $this->checkName,
+                DirWritable::class,
+            ));
+        }
+
+        return $params['path'];
     }
 }
