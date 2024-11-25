@@ -47,8 +47,8 @@ abstract class AbstractPsrContainerFactory
         return $config[self::CONFIG_KEY][$this->checkName] ?? [];
     }
 
-    protected function getLabel(array $params): ?string
+    protected function getLabel(array $params): string
     {
-        return $params['label'] ?? null;
+        return $params['label'] ?? '';
     }
 }
