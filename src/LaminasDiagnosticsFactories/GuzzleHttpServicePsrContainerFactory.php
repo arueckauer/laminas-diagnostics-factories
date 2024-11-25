@@ -65,10 +65,7 @@ final class GuzzleHttpServicePsrContainerFactory extends AbstractPsrContainerFac
         return $params['method'] ?? 'GET';
     }
 
-    /**
-     * @return mixed|null
-     */
-    private function getBody(array $params)
+    private function getBody(array $params): mixed
     {
         return $params['body'] ?? null;
     }
