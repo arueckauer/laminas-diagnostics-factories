@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace LaminasDiagnosticsFactories;
 
 use Laminas\Diagnostics\Check\CheckInterface;
-use LaminasDiagnosticsFactories\Exception\BadStaticPsrContainerFactoryUsageException;
+use LaminasDiagnosticsFactories\Exception\BadStaticPsrContainerFactoryUsage;
 use Psr\Container\ContainerInterface;
 
 use function count;
@@ -30,7 +30,7 @@ abstract class AbstractPsrContainerFactory
             count($arguments) === 0
             || ! ($container = current($arguments)) instanceof ContainerInterface
         ) {
-            throw BadStaticPsrContainerFactoryUsageException::missingContainerArgument($name);
+            throw BadStaticPsrContainerFactoryUsage::missingContainerArgument($name);
         }
 
         return (new static($name))->__invoke($container);

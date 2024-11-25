@@ -9,7 +9,7 @@ use RuntimeException;
 
 use function sprintf;
 
-final class BadStaticPsrContainerFactoryUsageException extends RuntimeException
+final class BadStaticPsrContainerFactoryUsage extends RuntimeException
 {
     public static function missingContainerArgument(string $factoryClassName): self
     {
