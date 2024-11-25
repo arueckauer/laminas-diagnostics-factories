@@ -18,7 +18,7 @@ abstract class AbstractPsrContainerFactory
     protected ContainerInterface $container;
 
     public function __construct(
-        private readonly string $checkName,
+        protected readonly string $checkName,
     ) {
     }
 
