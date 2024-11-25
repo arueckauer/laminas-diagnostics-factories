@@ -16,7 +16,7 @@ class PDOCheckPsrContainerFactoryTest extends TestCase
     /**
      * @throws Exception
      */
-    public function test__invoke()
+    public function test__invoke(): void
     {
         $factory = new PDOCheckPsrContainerFactory('pdo_check');
 

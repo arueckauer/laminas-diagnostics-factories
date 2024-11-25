@@ -16,7 +16,7 @@ class SecurityAdvisoryPsrContainerFactoryTest extends TestCase
     /**
      * @throws Exception
      */
-    public function test__invoke()
+    public function test__invoke(): void
     {
         $factory = new SecurityAdvisoryPsrContainerFactory('security_advisory');
 

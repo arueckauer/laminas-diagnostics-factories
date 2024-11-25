@@ -16,7 +16,7 @@ class DirWritablePsrContainerFactoryTest extends TestCase
     /**
      * @throws Exception
      */
-    public function test__invoke()
+    public function test__invoke(): void
     {
         $factory = new DirWritablePsrContainerFactory('dir_writable');
 

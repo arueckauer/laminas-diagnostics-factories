@@ -16,7 +16,7 @@ class GuzzleHttpServicePsrContainerFactoryTest extends TestCase
     /**
      * @throws Exception
      */
-    public function test__invoke()
+    public function test__invoke(): void
     {
         $factory = new GuzzleHttpServicePsrContainerFactory('guzzle_http_service');
 

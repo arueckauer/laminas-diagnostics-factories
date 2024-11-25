@@ -19,7 +19,7 @@ class CpuPerformancePsrContainerFactoryTest extends TestCase
     /**
      * @throws Exception
      */
-    public function test__callStatic()
+    public function test__callStatic(): void
     {
         $container = $this->createMock(ContainerInterface::class);
         $container->method('has')->willReturn(true);
@@ -39,7 +39,7 @@ class CpuPerformancePsrContainerFactoryTest extends TestCase
     /**
      * @throws Exception
      */
-    public function test__invoke()
+    public function test__invoke(): void
     {
         $factory = new CpuPerformancePsrContainerFactory('cpu_performance');
 

@@ -16,7 +16,7 @@ class ExtensionLoadedPsrContainerFactoryTest extends TestCase
     /**
      * @throws Exception
      */
-    public function test__invoke()
+    public function test__invoke(): void
     {
         $factory = new ExtensionLoadedPsrContainerFactory('extension_loaded');
 
