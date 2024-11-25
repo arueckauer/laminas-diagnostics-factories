@@ -4,15 +4,38 @@ declare(strict_types=1);
 
 namespace LaminasDiagnosticsFactoriesTest;
 
+use Laminas\Diagnostics\Check\CheckInterface;
+use LaminasDiagnosticsFactories\AbstractPsrContainerFactory;
 use LaminasDiagnosticsFactories\CpuPerformancePsrContainerFactory;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\Exception;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
+#[CoversClass(AbstractPsrContainerFactory::class)]
 #[CoversClass(CpuPerformancePsrContainerFactory::class)]
 class CpuPerformancePsrContainerFactoryTest extends TestCase
 {
+    /**
+     * @throws Exception
+     */
+    public function test__callStatic()
+    {
+        $container = $this->createMock(ContainerInterface::class);
+        $container->method('has')->willReturn(true);
+        $container->method('get')->willReturn([
+            'diagnostics' => [
+                'checkName' => [
+                    'label' => 'label',
+                ],
+            ],
+        ]);
+
+        $check = CpuPerformancePsrContainerFactory::checkName($container);
+
+        self::assertInstanceOf(CheckInterface::class, $check);
+    }
+
     /**
      * @throws Exception
      */
