@@ -22,8 +22,8 @@ final class CpuPerformancePsrContainerFactory extends AbstractPsrContainerFactor
         return $check;
     }
 
-    private function getMinPerformance(array $params): ?float
+    private function getMinPerformance(array $params): float
     {
-        return $params['minPerformance'] ?? null;
+        return $params['minPerformance'] ?? 0.5;
     }
 }
