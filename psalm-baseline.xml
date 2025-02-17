@@ -1,8 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+<files psalm-version="6.7.1@a2f190972555ea01b0cfcc1913924d6c5fc1a64e">
   <file src="src/LaminasDiagnosticsFactories/AbstractPsrContainerFactory.php">
     <PossiblyUnusedMethod>
       <code><![CDATA[__callStatic]]></code>
     </PossiblyUnusedMethod>
+  </file>
+  <file src="src/LaminasDiagnosticsFactories/CpuPerformancePsrContainerFactory.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container): CpuPerformance]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="src/LaminasDiagnosticsFactories/DirWritablePsrContainerFactory.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container): DirWritable]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="src/LaminasDiagnosticsFactories/DiskFreePsrContainerFactory.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container): DiskFree]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="src/LaminasDiagnosticsFactories/ExtensionLoadedPsrContainerFactory.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container): ExtensionLoaded]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="src/LaminasDiagnosticsFactories/GuzzleHttpServicePsrContainerFactory.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container): GuzzleHttpService]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="src/LaminasDiagnosticsFactories/PDOCheckPsrContainerFactory.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container): PDOCheck]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="src/LaminasDiagnosticsFactories/PhpVersionPsrContainerFactory.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container): PhpVersion]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="src/LaminasDiagnosticsFactories/SecurityAdvisoryPsrContainerFactory.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container): SecurityAdvisory]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="test/LaminasDiagnosticsFactories/CpuPerformancePsrContainerFactoryTest.php">
+    <UndefinedMagicMethod>
+      <code><![CDATA[CpuPerformancePsrContainerFactory::checkName($container)]]></code>
+    </UndefinedMagicMethod>
   </file>
 </files>
