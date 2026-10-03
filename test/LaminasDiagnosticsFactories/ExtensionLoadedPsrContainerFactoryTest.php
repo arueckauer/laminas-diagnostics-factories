@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
 #[CoversClass(ExtensionLoadedPsrContainerFactory::class)]
-class ExtensionLoadedPsrContainerFactoryTest extends TestCase
+final class ExtensionLoadedPsrContainerFactoryTest extends TestCase
 {
     /**
      * @throws Exception

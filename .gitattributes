@@ -8,4 +8,5 @@
 /composer.lock     export-ignore
 /phpcs.xml.dist    export-ignore
 /phpunit.xml.dist  export-ignore
+/structarmed.php   export-ignore
 /test              export-ignore

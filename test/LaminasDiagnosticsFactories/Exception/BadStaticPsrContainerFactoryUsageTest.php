@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace LaminasDiagnosticsFactories\Exception;
+namespace LaminasDiagnosticsFactoriesTest\Exception;
 
 use LaminasDiagnosticsFactories\Exception\BadStaticPsrContainerFactoryUsage;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(BadStaticPsrContainerFactoryUsage::class)]
-class BadStaticPsrContainerFactoryUsageTest extends TestCase
+final class BadStaticPsrContainerFactoryUsageTest extends TestCase
 {
     public function test_missingContainerArgument(): void
     {

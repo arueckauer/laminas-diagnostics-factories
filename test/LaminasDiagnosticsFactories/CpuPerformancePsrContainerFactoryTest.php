@@ -14,7 +14,7 @@ use Psr\Container\ContainerInterface;
 
 #[CoversClass(AbstractPsrContainerFactory::class)]
 #[CoversClass(CpuPerformancePsrContainerFactory::class)]
-class CpuPerformancePsrContainerFactoryTest extends TestCase
+final class CpuPerformancePsrContainerFactoryTest extends TestCase
 {
     /**
      * @throws Exception

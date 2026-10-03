@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
 #[CoversClass(GuzzleHttpServicePsrContainerFactory::class)]
-class GuzzleHttpServicePsrContainerFactoryTest extends TestCase
+final class GuzzleHttpServicePsrContainerFactoryTest extends TestCase
 {
     /**
      * @throws Exception
