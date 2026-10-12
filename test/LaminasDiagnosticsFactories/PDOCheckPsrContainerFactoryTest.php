@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
 #[CoversClass(PDOCheckPsrContainerFactory::class)]
-class PDOCheckPsrContainerFactoryTest extends TestCase
+final class PDOCheckPsrContainerFactoryTest extends TestCase
 {
     /**
      * @throws Exception

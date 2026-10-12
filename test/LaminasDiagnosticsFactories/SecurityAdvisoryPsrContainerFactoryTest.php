@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
 #[CoversClass(SecurityAdvisoryPsrContainerFactory::class)]
-class SecurityAdvisoryPsrContainerFactoryTest extends TestCase
+final class SecurityAdvisoryPsrContainerFactoryTest extends TestCase
 {
     /**
      * @throws Exception

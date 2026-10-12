@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
 #[CoversClass(DirWritablePsrContainerFactory::class)]
-class DirWritablePsrContainerFactoryTest extends TestCase
+final class DirWritablePsrContainerFactoryTest extends TestCase
 {
     /**
      * @throws Exception
