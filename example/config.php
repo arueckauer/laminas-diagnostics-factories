@@ -9,7 +9,6 @@ use LaminasDiagnosticsFactories\ExtensionLoadedPsrContainerFactory;
 use LaminasDiagnosticsFactories\GuzzleHttpServicePsrContainerFactory;
 use LaminasDiagnosticsFactories\PDOCheckPsrContainerFactory;
 use LaminasDiagnosticsFactories\PhpVersionPsrContainerFactory;
-use LaminasDiagnosticsFactories\SecurityAdvisoryPsrContainerFactory;
 
 return [
     'diagnostics' => [
@@ -68,20 +67,15 @@ return [
             'expectedVersion' => '7.4',
             'operator'        => '>=',
         ],
-        'security_advisory'      => [
-            'label'        => 'Security Advisory',
-            'lockFilePath' => __DIR__ . '/../composer.lock',
-        ],
     ],
     'di'          => [
-        'CpuPerformance'   => [CpuPerformancePsrContainerFactory::class, 'cpu_performance'],
-        'FreeTmpDisk'      => [DiskFreePsrContainerFactory::class, 'free_tmp_disk'],
-        'WritableTmpDir'   => [DirWritablePsrContainerFactory::class, 'writable_tmp_dir'],
-        'PhpExtensions'    => [ExtensionLoadedPsrContainerFactory::class, 'php_extensions'],
-        'LaminasPing'      => [GuzzleHttpServicePsrContainerFactory::class, 'laminas_ping'],
-        'MezzioPing'       => [GuzzleHttpServicePsrContainerFactory::class, 'mezzio_ping'],
-        'MysqlConnection'  => [PDOCheckPsrContainerFactory::class, 'mysql_connection'],
-        'PhpVersion'       => [PhpVersionPsrContainerFactory::class, 'php_version'],
-        'SecurityAdvisory' => [SecurityAdvisoryPsrContainerFactory::class, 'security_advisory'],
+        'CpuPerformance'  => [CpuPerformancePsrContainerFactory::class, 'cpu_performance'],
+        'FreeTmpDisk'     => [DiskFreePsrContainerFactory::class, 'free_tmp_disk'],
+        'WritableTmpDir'  => [DirWritablePsrContainerFactory::class, 'writable_tmp_dir'],
+        'PhpExtensions'   => [ExtensionLoadedPsrContainerFactory::class, 'php_extensions'],
+        'LaminasPing'     => [GuzzleHttpServicePsrContainerFactory::class, 'laminas_ping'],
+        'MezzioPing'      => [GuzzleHttpServicePsrContainerFactory::class, 'mezzio_ping'],
+        'MysqlConnection' => [PDOCheckPsrContainerFactory::class, 'mysql_connection'],
+        'PhpVersion'      => [PhpVersionPsrContainerFactory::class, 'php_version'],
     ],
 ];

@@ -16,12 +16,4 @@
             <directory name="vendor" />
         </ignoreFiles>
     </projectFiles>
-
-    <issueHandlers>
-        <UnusedClass>
-            <errorLevel type="suppress">
-                <directory name="test" />
-            </errorLevel>
-        </UnusedClass>
-    </issueHandlers>
 </psalm>
