@@ -4,6 +4,11 @@ All notable changes to this publication will be documented in this file.
 
 ## 4.0.0 (Unreleased)
 
+### Other changes
+
+-   Updated the minimum `laminas/laminas-diagnostics` version to 1.30.2.
+-   Updated development dependencies and quality-assurance tooling.
+
 ### Breaking changes
 
 -   Removed `SecurityAdvisoryPsrContainerFactory` and its dependency on the unmaintained
