@@ -1,40 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="7.3.1@81bda61675df22fc4e5e1ceab1c33f4c61a4830b">
-  <file src="src/LaminasDiagnosticsFactories/CpuPerformancePsrContainerFactory.php">
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container): CpuPerformance]]></code>
-    </MissingOverrideAttribute>
-  </file>
-  <file src="src/LaminasDiagnosticsFactories/DirWritablePsrContainerFactory.php">
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container): DirWritable]]></code>
-    </MissingOverrideAttribute>
-  </file>
-  <file src="src/LaminasDiagnosticsFactories/DiskFreePsrContainerFactory.php">
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container): DiskFree]]></code>
-    </MissingOverrideAttribute>
-  </file>
-  <file src="src/LaminasDiagnosticsFactories/ExtensionLoadedPsrContainerFactory.php">
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container): ExtensionLoaded]]></code>
-    </MissingOverrideAttribute>
-  </file>
-  <file src="src/LaminasDiagnosticsFactories/GuzzleHttpServicePsrContainerFactory.php">
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container): GuzzleHttpService]]></code>
-    </MissingOverrideAttribute>
-  </file>
-  <file src="src/LaminasDiagnosticsFactories/PDOCheckPsrContainerFactory.php">
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container): PDOCheck]]></code>
-    </MissingOverrideAttribute>
-  </file>
-  <file src="src/LaminasDiagnosticsFactories/PhpVersionPsrContainerFactory.php">
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container): PhpVersion]]></code>
-    </MissingOverrideAttribute>
-  </file>
+<files psalm-version="7.16.0@708bf98874d359acbdcedb84f8624e9ec215867d">
   <file src="test/LaminasDiagnosticsFactories/CpuPerformancePsrContainerFactoryTest.php">
     <UndefinedMagicMethod>
       <code><![CDATA[CpuPerformancePsrContainerFactory::checkName($container)]]></code>

@@ -6,12 +6,14 @@ namespace LaminasDiagnosticsFactories;
 
 use Laminas\Diagnostics\Check\DirWritable;
 use LaminasDiagnosticsFactories\Exception\InvalidConfiguration;
+use Override;
 use Psr\Container\ContainerInterface;
 
 use function sprintf;
 
 final class DirWritablePsrContainerFactory extends AbstractPsrContainerFactory
 {
+    #[Override]
     public function __invoke(ContainerInterface $container): DirWritable
     {
         $this->container = $container;

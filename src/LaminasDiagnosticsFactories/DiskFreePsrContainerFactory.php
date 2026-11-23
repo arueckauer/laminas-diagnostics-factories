@@ -6,12 +6,14 @@ namespace LaminasDiagnosticsFactories;
 
 use Laminas\Diagnostics\Check\DiskFree;
 use LaminasDiagnosticsFactories\Exception\InvalidConfiguration;
+use Override;
 use Psr\Container\ContainerInterface;
 
 use function sprintf;
 
 final class DiskFreePsrContainerFactory extends AbstractPsrContainerFactory
 {
+    #[Override]
     public function __invoke(ContainerInterface $container): DiskFree
     {
         $this->container = $container;
