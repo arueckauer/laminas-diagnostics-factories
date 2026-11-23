@@ -2,6 +2,15 @@
 
 All notable changes to this publication will be documented in this file.
 
+## 4.1.0 (2026-11-24)
+
+-   Added a security policy explaining how to report vulnerabilities privately.
+-   Replaced the code of conduct with the Contributor Covenant 3.0.
+-   Moved the community health files to `.github/` and replaced the issue template with issue forms.
+-   Excluded `.github/` and the remaining quality-assurance configuration files from the Composer package.
+-   Documented how to run all CI checks locally.
+-   Updated development dependencies.
+
 ## 4.0.0 (2026-11-03)
 
 ### Other changes
