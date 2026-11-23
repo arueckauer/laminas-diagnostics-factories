@@ -2,7 +2,7 @@
 
 All notable changes to this publication will be documented in this file.
 
-## 4.0.0 (Unreleased)
+## 4.0.0 (2026-11-03)
 
 ### Other changes
 
