@@ -14,8 +14,8 @@ final class BadStaticPsrContainerFactoryUsageTest extends TestCase
     public function test_missingContainerArgument(): void
     {
         self::assertSame(
-            'The first argument for Foo must be an instance of Psr\\Container\\ContainerInterface.',
-            BadStaticPsrContainerFactoryUsage::missingContainerArgument('Foo')->getMessage()
+            'The first argument for Foo::bar must be an instance of Psr\\Container\\ContainerInterface.',
+            BadStaticPsrContainerFactoryUsage::missingContainerArgument('Foo::bar')->getMessage()
         );
     }
 }

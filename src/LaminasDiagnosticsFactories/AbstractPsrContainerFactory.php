@@ -28,7 +28,7 @@ abstract class AbstractPsrContainerFactory
             count($arguments) === 0
             || ! ($container = current($arguments)) instanceof ContainerInterface
         ) {
-            throw BadStaticPsrContainerFactoryUsage::missingContainerArgument($name);
+            throw BadStaticPsrContainerFactoryUsage::missingContainerArgument(static::class . '::' . $name);
         }
 
         return (new static($name))->__invoke($container);
