@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace LaminasDiagnosticsFactoriesTest;
 
-use Laminas\Diagnostics\Check\CheckInterface;
+use Laminas\Diagnostics\Check\CpuPerformance;
 use LaminasDiagnosticsFactories\AbstractPsrContainerFactory;
 use LaminasDiagnosticsFactories\CpuPerformancePsrContainerFactory;
 use PHPUnit\Framework\Attributes\CoversClass;
@@ -22,18 +22,28 @@ final class CpuPerformancePsrContainerFactoryTest extends TestCase
     public function test__callStatic(): void
     {
         $container = $this->createMock(ContainerInterface::class);
-        $container->expects(self::once())->method('has')->willReturn(true);
-        $container->expects(self::once())->method('get')->willReturn([
-            'diagnostics' => [
-                'checkName' => [
-                    'label' => 'label',
+        $container
+            ->expects(self::once())
+            ->method('has')
+            ->with('config')
+            ->willReturn(true);
+        $container
+            ->expects(self::once())
+            ->method('get')
+            ->with('config')
+            ->willReturn([
+                'diagnostics' => [
+                    'cpu_performance' => [
+                        'label' => 'CPU Performance',
+                    ],
                 ],
-            ],
-        ]);
+            ]);
 
-        $check = CpuPerformancePsrContainerFactory::checkName($container);
+        $factory = [CpuPerformancePsrContainerFactory::class, 'cpu_performance'];
+        $check   = $factory($container);
 
-        self::assertInstanceOf(CheckInterface::class, $check);
+        self::assertInstanceOf(CpuPerformance::class, $check);
+        self::assertSame('CPU Performance', $check->getLabel());
     }
 
     /**

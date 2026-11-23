@@ -22,6 +22,11 @@ abstract class AbstractPsrContainerFactory
 
     abstract public function __invoke(ContainerInterface $container): CheckInterface;
 
+    /**
+     * Allows `[Factory::class, 'check_name']` callables in container config.
+     *
+     * @psalm-api
+     */
     public static function __callStatic(string $name, array $arguments): CheckInterface
     {
         if (

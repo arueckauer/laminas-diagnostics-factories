@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="7.16.0@708bf98874d359acbdcedb84f8624e9ec215867d">
-  <file src="test/LaminasDiagnosticsFactories/CpuPerformancePsrContainerFactoryTest.php">
-    <UndefinedMagicMethod>
-      <code><![CDATA[CpuPerformancePsrContainerFactory::checkName($container)]]></code>
-    </UndefinedMagicMethod>
-  </file>
-</files>
