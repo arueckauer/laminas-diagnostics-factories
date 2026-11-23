@@ -13,7 +13,7 @@ use function current;
 
 abstract class AbstractPsrContainerFactory
 {
-    public const CONFIG_KEY = 'diagnostics';
+    public const string CONFIG_KEY = 'diagnostics';
 
     protected ContainerInterface $container;
 

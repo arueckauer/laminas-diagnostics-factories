@@ -2,6 +2,18 @@
 
 All notable changes to this publication will be documented in this file.
 
+## 5.0.0 (unreleased)
+
+### Breaking changes
+
+-   `AbstractPsrContainerFactory::CONFIG_KEY` is now a typed class constant (`string`).
+
+### Migration
+
+If you extend `AbstractPsrContainerFactory` and redeclare `CONFIG_KEY`, declare it as `string` too,
+e.g. `public const string CONFIG_KEY = 'health';`. Otherwise, PHP fails with a fatal error
+when the subclass is loaded.
+
 ## 4.1.0 (2026-11-24)
 
 -   Added a security policy explaining how to report vulnerabilities privately.
