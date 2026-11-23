@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest a new factory or an improvement to an existing one.
+labels: ["enhancement"]
+body:
+    - type: textarea
+      id: problem
+      attributes:
+          label: Problem or motivation
+          description: Why is this change important to you? How would you use it, and how could it benefit other users?
+      validations:
+          required: true
+    - type: textarea
+      id: proposal
+      attributes:
+          label: Proposed solution
+          description: Describe the change or addition you are proposing, for example the configuration you would like to write.
+      validations:
+          required: true
+    - type: textarea
+      id: alternatives
+      attributes:
+          label: Alternatives considered
+          description: Other approaches or workarounds you have considered.
+    - type: textarea
+      id: implementation
+      attributes:
+          label: Possible implementation
+          description: Not obligatory, but suggest an idea for implementing the change.

@@ -25,7 +25,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](doc/CONTRIBUTING.md) and [CODE_OF_CONDUCT](doc/CODE_OF_CONDUCT.md) for details,
+Please see [CONTRIBUTING](.github/contributing.md) and [CODE_OF_CONDUCT](.github/CODE_OF_CONDUCT.md) for details,
 including how to run the CI checks locally.
 
 ## Credits
