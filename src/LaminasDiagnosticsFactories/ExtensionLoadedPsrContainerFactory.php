@@ -13,8 +13,7 @@ final class ExtensionLoadedPsrContainerFactory extends AbstractPsrContainerFacto
     #[Override]
     public function __invoke(ContainerInterface $container): ExtensionLoaded
     {
-        $this->container = $container;
-        $params          = $this->getParams();
+        $params = $this->getParams($container);
 
         $check = new ExtensionLoaded(
             $this->getExtensionName($params),

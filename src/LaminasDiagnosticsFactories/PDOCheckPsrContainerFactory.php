@@ -13,8 +13,7 @@ final class PDOCheckPsrContainerFactory extends AbstractPsrContainerFactory
     #[Override]
     public function __invoke(ContainerInterface $container): PDOCheck
     {
-        $this->container = $container;
-        $params          = $this->getParams();
+        $params = $this->getParams($container);
 
         return new PDOCheck(
             $this->getDsn($params),

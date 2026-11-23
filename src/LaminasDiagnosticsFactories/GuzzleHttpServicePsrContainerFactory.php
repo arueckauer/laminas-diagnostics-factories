@@ -14,8 +14,7 @@ final class GuzzleHttpServicePsrContainerFactory extends AbstractPsrContainerFac
     #[Override]
     public function __invoke(ContainerInterface $container): GuzzleHttpService
     {
-        $this->container = $container;
-        $params          = $this->getParams();
+        $params = $this->getParams($container);
 
         $check = new GuzzleHttpService(
             $this->getRequestOrUrl($params),

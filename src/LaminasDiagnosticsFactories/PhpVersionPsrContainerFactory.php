@@ -13,8 +13,7 @@ final class PhpVersionPsrContainerFactory extends AbstractPsrContainerFactory
     #[Override]
     public function __invoke(ContainerInterface $container): PhpVersion
     {
-        $this->container = $container;
-        $params          = $this->getParams();
+        $params = $this->getParams($container);
 
         $check = new PhpVersion(
             $this->getExpectedVersion($params),

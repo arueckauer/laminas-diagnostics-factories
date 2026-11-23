@@ -16,8 +16,7 @@ final class DirWritablePsrContainerFactory extends AbstractPsrContainerFactory
     #[Override]
     public function __invoke(ContainerInterface $container): DirWritable
     {
-        $this->container = $container;
-        $params          = $this->getParams();
+        $params = $this->getParams($container);
 
         $check = new DirWritable(
             $this->getPath($params),

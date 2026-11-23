@@ -15,8 +15,6 @@ abstract class AbstractPsrContainerFactory
 {
     public const string CONFIG_KEY = 'diagnostics';
 
-    protected ContainerInterface $container;
-
     final public function __construct(
         protected readonly string $checkName,
     ) {
@@ -36,12 +34,12 @@ abstract class AbstractPsrContainerFactory
         return (new static($name))->__invoke($container);
     }
 
-    protected function getParams(): array
+    protected function getParams(ContainerInterface $container): array
     {
         $config = [];
 
-        if ($this->container->has('config')) {
-            $config = $this->container->get('config');
+        if ($container->has('config')) {
+            $config = $container->get('config');
         }
 
         return $config[self::CONFIG_KEY][$this->checkName] ?? [];

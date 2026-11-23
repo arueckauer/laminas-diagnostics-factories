@@ -13,8 +13,7 @@ final class CpuPerformancePsrContainerFactory extends AbstractPsrContainerFactor
     #[Override]
     public function __invoke(ContainerInterface $container): CpuPerformance
     {
-        $this->container = $container;
-        $params          = $this->getParams();
+        $params = $this->getParams($container);
 
         $check = new CpuPerformance(
             $this->getMinPerformance($params),
