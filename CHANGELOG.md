@@ -4,15 +4,22 @@ All notable changes to this publication will be documented in this file.
 
 ## 5.0.0 (unreleased)
 
+### Other changes
+
+-   Added support for PHP 8.6.
+
 ### Breaking changes
 
+-   Dropped support for PHP 8.2. The minimum required PHP version is now 8.3.
 -   `AbstractPsrContainerFactory::CONFIG_KEY` is now a typed class constant (`string`).
 
 ### Migration
 
-If you extend `AbstractPsrContainerFactory` and redeclare `CONFIG_KEY`, declare it as `string` too,
-e.g. `public const string CONFIG_KEY = 'health';`. Otherwise, PHP fails with a fatal error
-when the subclass is loaded.
+Upgrade to PHP 8.3 or later before updating to 5.0.
+
+If you extend `AbstractPsrContainerFactory` and redeclare `CONFIG_KEY`, add the `string` type
+to the declaration. Otherwise, PHP fails with a fatal error when the subclass is loaded.
+Redeclaring the constant does not change the configuration key, which is always `diagnostics`.
 
 ## 4.1.0 (2026-11-24)
 
