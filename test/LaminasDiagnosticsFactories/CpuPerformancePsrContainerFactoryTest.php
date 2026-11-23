@@ -22,8 +22,8 @@ final class CpuPerformancePsrContainerFactoryTest extends TestCase
     public function test__callStatic(): void
     {
         $container = $this->createMock(ContainerInterface::class);
-        $container->method('has')->willReturn(true);
-        $container->method('get')->willReturn([
+        $container->expects(self::once())->method('has')->willReturn(true);
+        $container->expects(self::once())->method('get')->willReturn([
             'diagnostics' => [
                 'checkName' => [
                     'label' => 'label',
