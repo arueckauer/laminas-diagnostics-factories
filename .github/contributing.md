@@ -24,11 +24,7 @@ $ ./vendor/bin/phpunit
 $ ./vendor/bin/phpcs
 $ ./vendor/bin/psalm --no-cache
 $ ./vendor/bin/structarmed analyse
-$ markdownlint README.md
 ```
-
-`markdownlint` is provided by [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli)
-and must be installed separately (e.g. `npm install --global markdownlint-cli`).
 
 CI runs the PHP checks on every supported PHP version with both the lowest and the latest dependencies.
 
