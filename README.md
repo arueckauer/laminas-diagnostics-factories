@@ -23,15 +23,10 @@ See [example/config.php](example/config.php) for configuration details.
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Testing
-
-```bash
-$ ./vendor/bin/phpunit
-```
-
 ## Contributing
 
-Please see [CONTRIBUTING](doc/CONTRIBUTING.md) and [CODE_OF_CONDUCT](doc/CODE_OF_CONDUCT.md) for details.
+Please see [CONTRIBUTING](doc/CONTRIBUTING.md) and [CODE_OF_CONDUCT](doc/CODE_OF_CONDUCT.md) for details,
+including how to run the CI checks locally.
 
 ## Credits
 
