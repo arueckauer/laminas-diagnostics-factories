@@ -7,6 +7,8 @@ All notable changes to this publication will be documented in this file.
 ### Other changes
 
 -   Added support for PHP 8.6.
+-   Marked the `__invoke()` methods of all factories with the `#[Override]` attribute.
+-   Upgraded PHPUnit to 12 and updated the remaining development dependencies and quality-assurance tooling.
 
 ### Breaking changes
 
