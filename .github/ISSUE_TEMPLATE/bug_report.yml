@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a factory that fails or behaves unexpectedly.
+labels: ["bug"]
+body:
+    - type: markdown
+      attributes:
+          value: |
+              Thanks for taking the time to report a bug. Please check the existing issues first.
+    - type: textarea
+      id: description
+      attributes:
+          label: Description
+          description: What happened, and what did you expect to happen instead?
+      validations:
+          required: true
+    - type: textarea
+      id: reproduction
+      attributes:
+          label: Steps to reproduce
+          description: Include the relevant diagnostics configuration and the code that triggers the problem.
+          render: php
+      validations:
+          required: true
+    - type: textarea
+      id: output
+      attributes:
+          label: Error output
+          description: Exception messages, stack traces, or check results, if any.
+          render: text
+    - type: input
+      id: package-version
+      attributes:
+          label: Package version
+          description: Output of `composer show arueckauer/laminas-diagnostics-factories`.
+          placeholder: e.g. 4.0.0
+      validations:
+          required: true
+    - type: input
+      id: laminas-diagnostics-version
+      attributes:
+          label: laminas-diagnostics version
+          placeholder: e.g. 1.30.2
+    - type: input
+      id: php-version
+      attributes:
+          label: PHP version
+          placeholder: e.g. 8.4.14
+      validations:
+          required: true
+    - type: textarea
+      id: context
+      attributes:
+          label: Additional context
+          description: Operating system, PSR-11 container in use, or anything else that may help.
