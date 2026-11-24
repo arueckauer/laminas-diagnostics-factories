@@ -5,14 +5,15 @@ declare(strict_types=1);
 namespace LaminasDiagnosticsFactories;
 
 use Laminas\Diagnostics\Check\CpuPerformance;
+use Override;
 use Psr\Container\ContainerInterface;
 
 final class CpuPerformancePsrContainerFactory extends AbstractPsrContainerFactory
 {
+    #[Override]
     public function __invoke(ContainerInterface $container): CpuPerformance
     {
-        $this->container = $container;
-        $params          = $this->getParams();
+        $params = $this->getParams($container);
 
         $check = new CpuPerformance(
             $this->getMinPerformance($params),

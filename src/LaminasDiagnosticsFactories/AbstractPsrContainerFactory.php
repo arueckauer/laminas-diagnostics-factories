@@ -13,35 +13,38 @@ use function current;
 
 abstract class AbstractPsrContainerFactory
 {
-    public const CONFIG_KEY = 'diagnostics';
+    public const string CONFIG_KEY = 'diagnostics';
 
-    protected ContainerInterface $container;
-
-    public function __construct(
+    final public function __construct(
         protected readonly string $checkName,
     ) {
     }
 
     abstract public function __invoke(ContainerInterface $container): CheckInterface;
 
+    /**
+     * Allows `[Factory::class, 'check_name']` callables in container config.
+     *
+     * @psalm-api
+     */
     public static function __callStatic(string $name, array $arguments): CheckInterface
     {
         if (
             count($arguments) === 0
             || ! ($container = current($arguments)) instanceof ContainerInterface
         ) {
-            throw BadStaticPsrContainerFactoryUsage::missingContainerArgument($name);
+            throw BadStaticPsrContainerFactoryUsage::missingContainerArgument(static::class . '::' . $name);
         }
 
         return (new static($name))->__invoke($container);
     }
 
-    protected function getParams(): array
+    protected function getParams(ContainerInterface $container): array
     {
         $config = [];
 
-        if ($this->container->has('config')) {
-            $config = $this->container->get('config');
+        if ($container->has('config')) {
+            $config = $container->get('config');
         }
 
         return $config[self::CONFIG_KEY][$this->checkName] ?? [];

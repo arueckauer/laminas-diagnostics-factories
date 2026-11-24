@@ -11,11 +11,11 @@ use function sprintf;
 
 final class BadStaticPsrContainerFactoryUsage extends RuntimeException
 {
-    public static function missingContainerArgument(string $factoryClassName): self
+    public static function missingContainerArgument(string $factoryMethod): self
     {
         return new self(sprintf(
             'The first argument for %s must be an instance of %s.',
-            $factoryClassName,
+            $factoryMethod,
             ContainerInterface::class
         ));
     }

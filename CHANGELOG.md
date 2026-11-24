@@ -2,6 +2,45 @@
 
 All notable changes to this publication will be documented in this file.
 
+## 5.0.0 (unreleased)
+
+### Other changes
+
+-   Added support for PHP 8.6.
+-   Marked the `__invoke()` methods of all factories with the `#[Override]` attribute.
+-   Upgraded PHPUnit to 12 and updated the remaining development dependencies and quality-assurance tooling.
+-   The `BadStaticPsrContainerFactoryUsage` message now names the factory class and check name
+    (for example `CpuPerformancePsrContainerFactory::cpu_performance`) instead of only the check name.
+-   Removed the Psalm baseline. The code base now passes Psalm without suppressed issues.
+
+### Breaking changes
+
+-   Dropped support for PHP 8.2. The minimum required PHP version is now 8.3.
+-   `AbstractPsrContainerFactory::CONFIG_KEY` is now a typed class constant (`string`).
+-   The constructor of `AbstractPsrContainerFactory` is now `final`.
+-   Removed the `AbstractPsrContainerFactory::$container` property. `getParams()` now takes the
+    `ContainerInterface` as its argument, so factories no longer keep state between invocations.
+-   `Exception\InvalidConfiguration` is now `final`.
+
+### Migration
+
+Upgrade to PHP 8.3 or later before updating to 5.0.
+
+If you extend `AbstractPsrContainerFactory` and redeclare `CONFIG_KEY`, add the `string` type
+to the declaration. Otherwise, PHP fails with a fatal error when the subclass is loaded.
+Redeclaring the constant does not change the configuration key, which is always `diagnostics`.
+
+If you extend `AbstractPsrContainerFactory`, make these changes to your factory:
+
+-   Remove any constructor override. The check name is always passed as the only constructor argument.
+-   Replace `$this->container = $container;` followed by `$this->getParams()` with
+    `$this->getParams($container)`, and pass the container explicitly wherever you read `$this->container`.
+
+If you extend `Exception\InvalidConfiguration`, extend `InvalidArgumentException` instead,
+or catch `InvalidConfiguration` directly.
+
+Factories registered in container configuration need no changes.
+
 ## 4.1.0 (2026-11-24)
 
 -   Added a security policy explaining how to report vulnerabilities privately.

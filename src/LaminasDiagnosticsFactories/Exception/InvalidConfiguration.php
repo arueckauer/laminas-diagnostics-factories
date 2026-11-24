@@ -6,6 +6,6 @@ namespace LaminasDiagnosticsFactories\Exception;
 
 use InvalidArgumentException;
 
-class InvalidConfiguration extends InvalidArgumentException
+final class InvalidConfiguration extends InvalidArgumentException
 {
 }

@@ -6,14 +6,15 @@ namespace LaminasDiagnosticsFactories;
 
 use GuzzleHttp\ClientInterface as GuzzleClientInterface;
 use Laminas\Diagnostics\Check\GuzzleHttpService;
+use Override;
 use Psr\Container\ContainerInterface;
 
 final class GuzzleHttpServicePsrContainerFactory extends AbstractPsrContainerFactory
 {
+    #[Override]
     public function __invoke(ContainerInterface $container): GuzzleHttpService
     {
-        $this->container = $container;
-        $params          = $this->getParams();
+        $params = $this->getParams($container);
 
         $check = new GuzzleHttpService(
             $this->getRequestOrUrl($params),
